@@ -1,0 +1,182 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 48px 24px 72px;
+  background: radial-gradient(circle at top, #f7f9fc 0%, #eef2f6 45%, #e9eef5 100%);
+}
+
+.tree-view {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  padding: 32px;
+  border: 1px solid #e2e8f0;
+}
+
+.tree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tree-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  color: #0f172a;
+}
+
+.tree-header p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.tree-status {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.tree-status span {
+  background: #f1f5f9;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.tree-panel {
+  margin-top: 24px;
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.tree-node-block {
+  position: relative;
+}
+
+.tree-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+}
+
+.tree-row + .tree-row {
+  margin-top: 8px;
+}
+
+.tree-row.is-dragging {
+  opacity: 0.6;
+}
+
+.tree-row:hover {
+  border-color: #cbd5f5;
+}
+
+.tree-toggle {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  border: none;
+  background: #e2e8f0;
+  color: #0f172a;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tree-toggle:disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: default;
+}
+
+.tree-label {
+  font-size: 15px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.tree-loading {
+  font-size: 12px;
+  color: #0ea5e9;
+  margin-left: 6px;
+}
+
+.tree-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.tree-actions button {
+  border: 1px solid #cbd5f5;
+  background: #f8fafc;
+  color: #1e293b;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.tree-actions button:hover {
+  background: #e2e8f0;
+}
+
+.tree-edit-input {
+  border: 1px solid #cbd5f5;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  min-width: 180px;
+}
+
+.tree-add-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 12px;
+}
+
+.tree-children {
+  margin-top: 10px;
+}
+
+.tree-drop-zone {
+  height: 12px;
+  margin: 4px 0;
+  border-radius: 8px;
+  border: 1px dashed transparent;
+}
+
+.tree-drop-zone:hover {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+@media (max-width: 720px) {
+  .tree-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tree-row {
+    flex-wrap: wrap;
+  }
+
+  .tree-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
